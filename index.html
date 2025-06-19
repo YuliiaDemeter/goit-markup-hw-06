@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
+   
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -61,12 +54,98 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="burger-button" title="#">
+          <svg class="icon-burger" width="24" height="24"><use href="./images/icons.svg#icon-burger"></use></svg>
+        </button>
       </div>
+
+    <!-- Mobile menu -->
+
+   <div class="mobile-menu .is-open">
+        <div class="container mobile-menu-container">
+          <button class="icon-close-btn menu" type="button">
+            <svg class="icon-close" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+          </button>
+          <nav class="menu-navigation">
+            <ul class="mobile-menu-nav">
+              <li class="mobile-menu-item">
+                <a href="./index.html" class="mobile-menu-link">Studio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="mobile-menu-link">Portfolio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="mobile-menu-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mobile-menu-address">
+            <ul class="mobile-menu-address-list">
+              <li class="mobile-menu-address-item">
+                <a class="mobile-menu-address-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-menu-address-item">
+                <a class="mobile-menu-address-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="section-mobil-menu-socials">
+            <li class="section-team-socials-item">
+              <a href="" class="section-team-icon">
+                <svg class="section-team-icon-svg" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="section-team-socials-item">
+              <a href="" class="section-team-icon"
+                ><svg
+                  class="section-team-icon-svg"
+                  width="16"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="section-team-socials-item">
+              <a href="" class="section-team-icon"
+                ><svg
+                  class="section-team-icon-svg"
+                  width="16"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="section-team-socials-item">
+              <a href="" class="section-team-icon"
+                ><svg
+                  class="section-team-icon-svg"
+                  width="16"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+<!-- end-Mobile menu -->
+
     </header>
 
     <!-- ============  Solutions  =========== -->
 
-    <main class="page-main">
+    <main class="page-main hidden">
       <section class="main-solutions">
         <div class="container solutions-container">
           <h1 class="main-solutions-item">
@@ -80,7 +159,7 @@
 
       <!-- ================ Features  ================-->
 
-      <section class="section features-section">
+      <section class="section features-section hidden">
         <div class="container features-container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="features-list">
@@ -141,14 +220,15 @@
 
       <!--================ Team section =========== -->
 
-      <section class="team-section">
+      <section class="team-section hidden">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
             <li class="team-list-card">
               <img
                 class="team-list-images"
-                src="./images/1.jpg"
+                srcset="./images/mark@1x.jpg 1x, ./images/mark@2x.jpg 2x"
+                src="./images/Mark.jpg"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -215,7 +295,8 @@
             <li class="team-list-card">
               <img
                 class="team-list-images"
-                src="./images/2.jpg"
+                srcset="./images/tom@1x.jpg 1x, ./images/tom@2x.jpg 2x"
+                src="./images/Tom.jpg"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -282,7 +363,8 @@
             <li class="team-list-card">
               <img
                 class="team-list-images"
-                src="./images/3.jpg"
+                srcset="./images/camila@1x.jpg 1x, ./images/camila@2x.jpg 2x"
+                src="./images/Camila.jpg"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -349,7 +431,8 @@
             <li class="team-list-card">
               <img
                 class="team-list-images"
-                src="./images/4.jpg"
+                srcset="./images/daniel@1x.jpg 1x, ./images/daniel@2x.jpg 2x"
+                src="./images/Daniel.jpg"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -418,15 +501,21 @@
 
       <!-- ============ section Portfolio ============-->
 
-      <section class="portfolio-section">
+      <section class="portfolio-section hidden">
         <div class="container portfolio-container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
             <li class="portfolio-card">
               <div class="portfolio-cover">
+
+                <picture>
+                <source media="(min-width: 320px)" srcset="./images/banking-mobile@1x.jpg 1x, ./images/banking-mobile@2x.jpg 2x" >
+                <source media="(min-width: 768px)" srcset="./images/banking-tablet@1x.jpg 1x, ./images/banking-tablet@2x.jpg 2x" >
+                <source media="(min-width: 1158px)" srcset="./images/banking@2x.jpg 2x" >
+                </picture>
                 <img
                   class="portfolio-list-images"
-                  src="./images/p-1.jpg"
+                  src="./images/banking.jpg"
                   alt="App screens on device"
                   width="360"
                   height="300"
@@ -446,9 +535,14 @@
 
             <li class="portfolio-card">
               <div class="portfolio-cover">
+                <picture>
+                <source media="(min-width: 320px)" srcset="./images/payment-mobile@1x.jpg 1x, ./images/payment-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./images/payment-tablet@1x.jpg 1x, ./images/payment-tablet@2x.jpg 2x">
+                <source media="(min-width: 1158px)" srcset="./images/payment@2x.jpg 2x">
+                </picture>
                 <img
                   class="portfolio-list-images"
-                  src="./images/p-2.jpg"
+                  src="./images/payment.jpg"
                   alt="Contactless payment"
                   width="360"
                   height="300"
@@ -467,9 +561,14 @@
 
             <li class="portfolio-card">
               <div class="portfolio-cover">
+                <picture>
+                <source media="(min-width: 320px)" srcset="./images/medit-mobile@1x.jpg 1x, ./images/medit-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./images/medit-tablet@1x.jpg 1x, ./images/medit-tablet@2x.jpg 2x">
+                <source media="(min-width: 1158px)" srcset="./images/medit@2x.jpg 2x">
+                </picture>
                 <img
                   class="portfolio-list-images"
-                  src="./images/p-3.jpg"
+                  src="./images/medit.jpg"
                   alt="Laptop and phone screen"
                   width="360"
                   height="300"
@@ -488,13 +587,22 @@
 
             <li class="portfolio-card">
               <div class="portfolio-cover">
+
+                <picture>
+                <source media="(min-width: 320px)" srcset="./images/taxi-mobile@1x.jpg 1x, ./images/taxi-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./images/taxi-tablet@1x.jpg 1x, ./images/taxi-tablet@2x.jpg 2x">
+                <source media="(min-width: 1158px)" srcset="./images/taxi@2x.jpg 2x">
+                <img src="./images/taxi.jpg" alt="taxi service">
+                </picture>
+
                 <img
                   class="portfolio-list-images"
-                  src="./images/p-4.jpg"
+                  src="./images/taxi.jpg"
                   alt="Smartphone in the driver's cabin"
                   width="360"
                   height="300"
                 />
+
                 <p class="portfolio-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -509,9 +617,14 @@
 
             <li class="portfolio-card">
               <div class="portfolio-cover">
+                <picture>
+                <source media="(min-width: 320px)" srcset="./images/illust-mobile@1x.jpg 1x, ./images/illust-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./images/illust-tablet@1x.jpg 1x, ./images/illust-tablet@2x.jpg 2x">
+                <source media="(min-width: 1158px)" srcset="./images/illustrations@2x.jpg 2x">
+                </picture>                
                 <img
                   class="portfolio-list-images"
-                  src="./images/p-5.jpg"
+                  src="./images/illustrations.jpg"
                   alt="Smartphone Screen Design Options"
                   width="360"
                   height="300"
@@ -530,9 +643,16 @@
 
             <li class="portfolio-card">
               <div class="portfolio-cover">
+                
+                <picture>
+                <source media="(min-width: 320px)" srcset="./images/course-mobile@1x.jpg 1x,./images/course-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./images/course-tablet@1x.jpg 1x, ./images/course-tablet@2x.jpg 2x">
+                <source media="(min-width: 1158px)" srcset="./images/courses@2x.jpg 2x">
+                </picture>
+
                 <img
                   class="portfolio-list-images"
-                  src="./images/p-6.jpg"
+                  src="./images/courses.jpg"
                   alt="Girl looking at smartphone screen with smile"
                   width="360"
                   height="300"
@@ -555,7 +675,7 @@
 
     <!-- ============= Section FOOTER ============= -->
 
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container footer-container">
         <div class="footer-logo-box">
           <a class="logo footer-logo" href="./index.html"
@@ -648,7 +768,7 @@
 
    <!-- Modal section -->
 
-<div class="backdrop is-open">
+<div class="backdrop is-open hidden">
 <div class="modal">
   <button class="modal-button-close" type="button">
     <svg class="icons-close" width="8" height="8">
